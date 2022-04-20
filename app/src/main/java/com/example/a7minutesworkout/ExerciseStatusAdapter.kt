@@ -26,7 +26,24 @@ class ExerciseStatusAdapter(val items: ArrayList<ExerciseModel>) :
         val model: ExerciseModel = items[position]
         holder.tvItem.text = model.getId().toString()
 
-        
+        when {
+            model.getIsSelected() -> {
+                holder.tvItem.background =
+                    ContextCompat.getDrawable(holder.tvItem.context, R.drawable.item_circular_thin_color_accent_border)
+                holder.tvItem.setTextColor(Color.parseColor("#212121"))
+            }
+            model.getIsCompleted() -> {
+                holder.tvItem.background =
+                    ContextCompat.getDrawable(holder.tvItem.context, R.drawable.item_circular_color_accent_background)
+                holder.tvItem.setTextColor(Color.parseColor("#FFFFFF"))
+            }
+            else -> {
+                holder.tvItem.background =
+                    ContextCompat.getDrawable(holder.tvItem.context, R.drawable.item_circular_color_gray_background)
+                holder.tvItem.setTextColor(Color.parseColor("#212121"))
+
+            }
+        }
     }
 
     override fun getItemCount(): Int {
