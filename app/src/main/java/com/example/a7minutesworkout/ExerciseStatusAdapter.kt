@@ -1,7 +1,9 @@
 package com.example.a7minutesworkout
 
+import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.example.a7minutesworkout.databinding.ItemExerciseStatusBinding
 
@@ -23,6 +25,8 @@ class ExerciseStatusAdapter(val items: ArrayList<ExerciseModel>) :
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val model: ExerciseModel = items[position]
         holder.tvItem.text = model.getId().toString()
+
+        
     }
 
     override fun getItemCount(): Int {
