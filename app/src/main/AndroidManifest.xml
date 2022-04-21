@@ -10,6 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.7MinutesWorkout">
         <activity
+            android:name=".BMIActivity"
+            android:exported="true"
+            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar" />
+        <activity
             android:name=".FinishActivity"
             android:exported="true"
             android:theme="@style/Theme.MaterialComponents.NoActionBar" />

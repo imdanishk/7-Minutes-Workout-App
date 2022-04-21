@@ -7,4 +7,6 @@
     <string name="you_have_completed_the_workout">You have completed the workout!</string>
     <string name="congratulations">Congratulations!</string>
     <string name="end">END</string>
+    <string name="calculator">Calculator</string>
+    <string name="bmi">BMI</string>
 </resources>
